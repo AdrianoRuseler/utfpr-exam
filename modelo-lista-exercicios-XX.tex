@@ -1,0 +1,193 @@
+	
+	
+%	\documentclass[11pt,answers]{utfpr-exam}
+
+	\documentclass[11pt]{utfpr-exam}	
+	
+
+%	\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+% Dados
+
+\data{\today} 
+\disciplina{ET76C -- Eletrônica de Potência }
+\tipoexame{Lista de Exercícios 02 }
+\semestre{2017/1}
+\professor{Prof. Adriano Ruseler, Dr. Eng.}
+\departamento{Departamento Acadêmico de Eletrotécnica}
+\universidade{UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ}	
+
+	
+	%==============================================================
+	\begin{document}
+
+%\imprimircabecalho	
+\imprimircabecalholista
+
+%\imprimirtabela
+
+\imprimirtabelacombinada
+		
+	
+	
+\begin{framed}
+	\noindent \textbf{Observações:}
+	\begin{enumerate}
+		\item É permitido qualquer tipo de consulta ou recurso para a resolução dos exercícios. Utilize o simulador como verificação final do resultado. 
+		\item Cada questão possui uma pontuação, a qual é utilizada para a avaliação da lista e também para medir o grau de dificuldade do exercício.
+		\item Considere a nomenclatura: $x \rightarrow$ variável no tempo, $X \rightarrow$ valor eficaz de $x$, $\hat{X} \rightarrow$ valor de pico de $x$ e $\bar{X} \rightarrow$ valor médio de $x$.
+	\end{enumerate}
+\end{framed}	
+
+
+\begin{questions}
+				
+				
+\question[25]
+\label{Q:revisao}
+				
+			Monte no simulador PSIM a estrutura apresentada em aula, utilizando o bloco contendo a ponte retificadora trifásica.
+			
+		\begin{parts}									
+			\part[05] Verifique que para $\alpha = 0$ a ponte a tiristor se comporta como caso particular da ponte a diodos.
+			\part[10] Obtenha a tensão na resistência de carga.
+			\part[10] Calcule os valores eficazes e médios das correntes nos tiristores para $\alpha=60$.	
+			\bonuspart[2 \half] What famous mathematician had an elegant proof for this theorem but there was not enough space in the margin to write it down?	
+		\end{parts}
+							
+							
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figuras/SimularEstruturaBloco}
+	\caption{Estrutura simulada em Aula.}
+	\label{fig:SimularEstruturaBloco}
+\end{figure}
+			
+
+\begin{solution}
+	Once upon a midnight dreary, while I pondered, weak and weary,
+	Over many a quaint and curious volume of forgotten lore--- While I
+	nodded, nearly napping, suddenly there came a tapping, As of some
+	one gently rapping, rapping at my chamber door. ‘‘\,’Tis some
+	visitor,’’ I muttered, ‘‘tapping at my chamber door--- Only this
+	and nothing more.’’
+\end{solution}
+			
+			
+			
+			
+			
+			
+	
+				
+				\question[06]
+				\label{Q:perunit}
+	Implemente o exercício \ref{Q:revisao} utilizando componentes discretos conforme a figura \ref{fig:TiristorDiscreto}.
+	
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/TiristorDiscreto}
+	\caption{Implemente a versão discreta do retificador trifásico a tiristor.}
+	\label{fig:TiristorDiscreto}
+	\end{figure}
+	
+
+				
+							
+				\question[07]
+				\label{Q:ExPSIM}
+				
+				
+		\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figuras/ExPSIM}
+	\caption{Exemplo do controle de uma ponte retificadora a tiristores.}
+	\label{fig:ExPSIM}
+	\end{figure}
+			
+	O software de simulação PSIM possui uma pasta com exemplos em seu diretório de instalação. Procure o exemplo apresentado na figura \ref{fig:ExPSIM}	e faça uma simulação exploratória.		
+				
+
+				
+				
+				
+				\question[8]
+				\label{Q:Desafio}
+		Monte no simulador PSIM a estrutura pentafásica apresentada na figura com carga resistiva.
+		\begin{enumerate}
+			\item Verifique que para $\alpha = 0$ a ponte a tiristor se comporta como caso particular da ponte a diodos.
+			\item Obtenha a tensão na resistência de carga.
+			\item Calcule os valores eficazes e médios das correntes nos tiristores para $\alpha=45$.
+		\end{enumerate}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=0.7\linewidth]{figuras/TiristorPentafase}
+			\caption{Estrutura pentafásica proposta como desafio.}
+			\label{fig:TiristorPentafase}
+		\end{figure}
+				
+	
+				
+	
+	\question[20] Considere a expressão $f(x)=3x^3+2x^2+x+1$.
+	\noaddpoints % to omit double points count
+	\begin{parts}
+		\part[10] Calcule $f'(x)$.
+		\part[10] Calcule $f''(x)$.
+	\end{parts}
+
+	
+	\question[2] One of these things is not like the others; one of these
+	things is not the same. Which one is different?
+	\begin{choices}
+		\choice John
+		\choice Paul
+		\choice George
+		\choice Ringo
+		\choice Socrates
+	\end{choices}
+	
+
+	
+	\question[3] Mark box if true.
+	\addpoints
+	\begin{checkboxes}
+		\choice 2+2=4
+		\choice $\frac{d}{dx} (x^2+1) = 2x+1$
+		\choice The Moon is made of cheese.
+	\end{checkboxes}
+	
+
+	
+	\question[10]
+	In no more than one paragraph, explain why the earth is round.
+	\makeemptybox{\fill}
+	
+	\newpage
+	
+	\question[20]
+	Explain blah, blah\ldots
+	\fillwithlines{\fill}
+	
+	\newpage
+	
+	
+			
+				
+		\bonusquestion[30] Prove that the real part of all non-trivial zeros of the function 
+		\(\zeta(z)\) is \(\frac{1}{2}\) (A million-dollar question)
+			\fillwithdottedlines{8em}
+				
+				
+	
+			\end{questions}
+%			\begin{center}
+%				\rule{.5\textwidth}{1pt}
+%			\end{center}
+		
+		
+			
+		
+		\end{document} 
